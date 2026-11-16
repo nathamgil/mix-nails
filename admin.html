@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/estilo.css?v=20261116105458">
+<link rel="stylesheet" href="assets/estilo.css?v=20261116105541">
 <style>
   [hidden]{display:none!important}
   .barra-dia{display:flex;align-items:center;gap:.6rem;margin:1.2rem 0}
@@ -163,7 +163,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="assets/config.js?v=20261116105458"></script>
+<script src="assets/config.js?v=20261116105541"></script>
 <script>
 (function () {
   'use strict';
@@ -182,7 +182,7 @@
   function deIso(s){ var p=String(s).split('-'); return new Date(+p[0],+p[1]-1,+p[2]); }
   function hhmm(t){ return String(t).slice(0,5); }
   function minutos(t){ var p=String(t).split(':'); return (+p[0])*60+(+p[1]); }
-  function dinheiro(c){ return 'R$ '+(c/100).toFixed(2).replace('.',','); }
+  function dinheiro(c){ return c ? 'R$ '+(c/100).toFixed(2).replace('.',',') : 'sob consulta'; }
   function porExtenso(s){ var d=deIso(s); return SEMANA[d.getDay()]+', '+d.getDate()+' de '+MESES[d.getMonth()]; }
   function aviso(cx,cls,txt){ cx.innerHTML=''; cx.appendChild(el('div','aviso '+cls,txt)); }
 
